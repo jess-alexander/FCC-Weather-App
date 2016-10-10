@@ -1,7 +1,3 @@
-//Optional -- 
-//  Display a different picture depending on the weather returned
-
-
 var lat, lng; //global variable to gather weather information
 var tempToggle = true; //create click event to toggle this Boolean to update JSON request and highlighting
 
@@ -44,21 +40,12 @@ function getWeather(lat, lng) {
             //LOCATION INFO
             $("#location").text(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
             //TEMP INFO
-
             $("#temp-wrapper").html("<h2>" + data.query.results.channel.item.condition.temp + "&deg<span id = 'cF'>"+data.query.results.channel.units.temperature+"</span></h2>");
-            
             //CURRENT CODITIONS
             console.log(data.query.results.channel.item.condition.text);
             $("h3.condition").html(data.query.results.channel.item.condition.text);
             weatherIcon = "wi-yahoo-" + data.query.results.channel.item.condition.code;
             $("i.condition").addClass(weatherIcon);
-
-            //yahoo affliation
-            $("a.yahoo").attr("href",data.query.results.channel.image.link);
-            $("img.yahoo").attr("src",data.query.results.channel.image.url);
-            $("img.yahoo").attr("width",data.query.results.channel.image.width);
-            $("img.yahoo").attr("height",data.query.results.channel.image.height);
-
 
         } else {
             $(".loading").html("<h3> Bummer... error in retreiving weather data.</h3><h4>Please try again later</h4>");
