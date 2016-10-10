@@ -1,13 +1,5 @@
-//get location
-//access granted?
-//translate latlon to city/state/country with googleAPI key
-//display city to form
-//send request to yahoo weather with city and YahooAPI key
-//get the json file
-//display json to form, specifically temperature
 
 //Optional -- 
-//  Make a link to switch between F and C. Send another request to switch?
 //  Display a different picture depending on the weather returned
 
 
