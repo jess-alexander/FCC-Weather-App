@@ -54,8 +54,8 @@ function getWeather(lat, lng) {
                 $('span#c').addClass("chosen");
             }
         //CURRENT CODITIONS
-            
-            $("#weather").html(data.query.results.channel.item.condition);
+            console.log(data.query.results.channel.item.condition.text);
+            $("#condition").html(data.query.results.channel.item.condition.text);
 
         } else {
             console.log("problem fetching weather data from yahoo");
