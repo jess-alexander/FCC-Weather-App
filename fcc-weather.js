@@ -55,7 +55,7 @@ function getWeather(lat, lng) {
             }
         //CURRENT CODITIONS
             console.log(data.query.results.channel.item.condition.text);
-            $("h4.condition").html(data.query.results.channel.item.condition.text);
+            $("h3.condition").html(data.query.results.channel.item.condition.text);
             weatherIcon = "wi-yahoo-"+data.query.results.channel.item.condition.code;
             $("i.condition").addClass(weatherIcon);
 
