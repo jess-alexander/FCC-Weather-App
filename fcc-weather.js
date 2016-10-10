@@ -1,13 +1,5 @@
-//get location
-//access granted?
-//translate latlon to city/state/country with googleAPI key
-//display city to form
-//send request to yahoo weather with city and YahooAPI key
-//get the json file
-//display json to form, specifically temperature
 
 //Optional -- 
-//  Make a link to switch between F and C. Send another request to switch?
 //  Display a different picture depending on the weather returned
 
 
@@ -62,7 +54,13 @@ function getWeather(lat, lng) {
                 $('span#c').addClass("chosen");
             }
         //CURRENT CODITIONS
-            $("#weather").html(data.query.results.channel.item.description);
+            console.log(data.query.results.channel.item.condition.text);
+            $("h3.condition").html(data.query.results.channel.item.condition.text);
+            weatherIcon = "wi-yahoo-"+data.query.results.channel.item.condition.code;
+            $("i.condition").addClass(weatherIcon);
+
+        //yahoo affliation
+
 
         } else {
             console.log("problem fetching weather data from yahoo");
@@ -78,15 +76,11 @@ $(document).ready(function(){
 
     $('div#cf').on('click', "span#c", function (e) {
         tempToggle = false;
-        // $("span#f").toggleClass("chosen");
-        // $("span#c").toggleClass("chosen");
         getWeather(lat,lng);
     });
 
     $('div#cf').on('click', "span#f", function (e) {
         tempToggle = true;
-        // $("span#f").toggleClass("chosen");
-        // $("span#c").toggleClass("chosen");
         getWeather(lat,lng);
     });
 
