@@ -55,7 +55,12 @@ function getWeather(lat, lng) {
             }
         //CURRENT CODITIONS
             console.log(data.query.results.channel.item.condition.text);
-            $("#condition").html(data.query.results.channel.item.condition.text);
+            $("h4.condition").html(data.query.results.channel.item.condition.text);
+            weather-icon = "wi-yahoo-"+data.query.results.channel.item.condition.code;
+            $("i.condition").addClass(weather-icon);
+
+        //yahoo affliation
+
 
         } else {
             console.log("problem fetching weather data from yahoo");

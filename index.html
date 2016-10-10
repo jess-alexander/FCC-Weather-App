@@ -2,8 +2,13 @@
 <html>
 
 <head>
+		<!-- Local Stylesheet -->
     <link rel="stylesheet" type="text/css" href="fcc-weather.css">
+    	<!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+       <!-- FontAwesome -->
+    <link href="css/lib/font-awesome.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f1a4de6791.js"></script>
     <title>Rain or Shine</title>
 </head>
 <div class="container text-center">
@@ -11,7 +16,7 @@
         <h1 id="location" class="col-xs-12"></h1>
     </header>
     <section class="weather-info ">
-    
+
         <div  class="row">
             <div class="col-xs-5"></div>
             <div class="col-xs-2">
@@ -26,8 +31,9 @@
         <div class="row">
             <div class="col-xs-4"></div>
             <div class="col-xs-4">
-            	<h2>Current Condition:</h2>
-            	<h3 id="condition"></h3>
+            	<h3>Current Condition:</h3>
+            	<h4 class="condition"></h4>
+            	<i  class="condition wi"></i>
             </div>
             <div class="col-xs-4"></div>
         </div>
