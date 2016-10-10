@@ -54,7 +54,8 @@ function getWeather(lat, lng) {
                 $('span#c').addClass("chosen");
             }
         //CURRENT CODITIONS
-            $("#weather").html(data.query.results.channel.item.description);
+            
+            $("#weather").html(data.query.results.channel.item.condition);
 
         } else {
             console.log("problem fetching weather data from yahoo");
@@ -70,15 +71,11 @@ $(document).ready(function(){
 
     $('div#cf').on('click', "span#c", function (e) {
         tempToggle = false;
-        // $("span#f").toggleClass("chosen");
-        // $("span#c").toggleClass("chosen");
         getWeather(lat,lng);
     });
 
     $('div#cf').on('click', "span#f", function (e) {
         tempToggle = true;
-        // $("span#f").toggleClass("chosen");
-        // $("span#c").toggleClass("chosen");
         getWeather(lat,lng);
     });
 
