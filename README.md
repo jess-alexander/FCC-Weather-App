@@ -9,4 +9,4 @@ Yahoo Weather API -- https://developer.yahoo.com/weather/
 
 IP Info API -- http://ipinfo.io/developers
 
-Bootstrap -- getboostrap.com/
+Bootstrap -- http://getboostrap.com/
