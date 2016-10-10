@@ -44,13 +44,9 @@ function getWeather(lat, lng) {
             //LOCATION INFO
             $("#location").text(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
             //TEMP INFO
-            $("#temp").html('<h2>' + data.query.results.channel.item.condition.temp + "&deg</h2>"); //check out .append('<h2>'+) for cleaner alternataive
-            $("#cf").html("<span id = 'c'>C</span> | <span id = 'f'>F</span>");
-            if (tempToggle) { //add styling after element has been created
-                $("span#f").addClass("chosen");
-            } else {
-                $("span#c").addClass("chosen");
-            }
+
+            $("#temp-wrapper").html("<h2>" + data.query.results.channel.item.condition.temp + "&deg<span id = 'cF'>"+data.query.results.channel.units.temperature+"</span></h2>");
+            
             //CURRENT CODITIONS
             console.log(data.query.results.channel.item.condition.text);
             $("h3.condition").html(data.query.results.channel.item.condition.text);
@@ -65,7 +61,7 @@ function getWeather(lat, lng) {
 
 
         } else {
-            $("#banner").html("<h3> Bummer... error in retreiving weather data.</h3><h4>Please try again later</h4>");
+            $(".loading").html("<h3> Bummer... error in retreiving weather data.</h3><h4>Please try again later</h4>");
             console.log("problem fetching weather data from yahoo");
         }
     }); //close $.getJSON(yahoo weather)
@@ -73,16 +69,8 @@ function getWeather(lat, lng) {
 
 $(document).ready(function() {
 
-    //currently, both click events are always active. 
-    //Alternatively, they could be flickered on and off, added within the getWeather function
-
-    $('div#cf').on('click', "span#c", function(e) {
-        tempToggle = false;
-        getWeather(lat, lng);
-    });
-
-    $('div#cf').on('click', "span#f", function(e) {
-        tempToggle = true;
+    $('div#temp-wrapper').on('click', "#cF", function() {
+        tempToggle = !tempToggle;
         getWeather(lat, lng);
     });
 
