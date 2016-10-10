@@ -10,11 +10,14 @@
     <title>Rain or Shine</title>
 </head>
 <div class="container text-center">
+<div class = "loading">
+	<h1>Please wait while we load your weather information</h1>
+</div>
     <header class="row text-center weather-info">
         <h1 id="location" class="col-xs-12"></h1>
     </header>
     <section class="weather-info ">
-
+<!-- Current Temperature -->
         <div  class="row">
             <div class="col-xs-5"></div>
             <div class="col-xs-2">
@@ -25,7 +28,7 @@
             </div>
             <div class="col-xs-5"></div>
         </div>
-
+<!-- Current Condition -->
         <div class="row">
             <div class="col-xs-4"></div>
             <div class="col-xs-4">
@@ -34,8 +37,12 @@
             </div>
             <div class="col-xs-4"></div>
         </div>
-
-        <div id="banner" class="row"></div>
+<!-- Yahoo Afflication -->
+        <div class="row">
+        	<a class="yahoo" href=""><img class="yahoo" src="" alt="yahoo-weather"></a>
+        </div>
+	<!-- Geolocation vs ipLocation         -->
+	<div id="banner" class="row"></div>
     </section>
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
