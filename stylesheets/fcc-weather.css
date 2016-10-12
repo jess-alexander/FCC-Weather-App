@@ -1,20 +1,24 @@
 body{
-
-	background: #4CB8C4; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #4CB8C4 , #3CD3AD); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #4CB8C4 , #3CD3AD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-	color: white;
+    background: url("weather.jpeg") no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+    background-size: cover;
 }
-
-
+.loading{
+    margin-top: 10em;
+    color:white;
+}
 .weather-info {
+    margin-top: 5em;
     display: none;
+    color:white;
 }
 
 #cF {
-    color: blue;
+    color: #EAD7C2;
     font-weight: 800;
+    font-size: .6em;
 }
 
 div#temp-wrapper {
@@ -26,18 +30,38 @@ div#temp {
     float: left;
 }
 
-div#cf {
-    margin-top: 19px;
-    margin-left: 7px;
-}
-
 div#temp-wrapper {
     margin: 0 auto;
     width: 100px;
+    color:white;
 }
 
-
-i.condition.wi{ 
+i.wi{ 
 	padding:0.3em;
 	font-size: 4em;
+    color:white;
+}
+div.fc-container{
+     margin: 0 auto;
+     background: rgba(139, 173, 187, .75);
+     border-radius: 1em;
+       -webkit-box-shadow: inset 0 0 2em rgba(238, 249, 251, .25);
+       -moz-box-shadow: inset 0 0 2em rgba(238, 249, 251, .25);
+       -o-box-shadow: inset 0 0 2em rgba(238, 249, 251, .25);
+       box-shadow: inset 0 0 2em rgba(238, 249, 251, .25);
+}
+div.fc-inner{
+    overflow: hidden;
+    margin: 0 auto;
+    width:1000px;
+}
+div.forecast{
+    position: relative;
+    float:left;
+    padding:2em;
+    color:white;
+}
+
+div.forecast:first-of-type{
+    padding-left:2.2em;
 }
