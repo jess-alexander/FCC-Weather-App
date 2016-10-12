@@ -46,12 +46,25 @@ function getWeather(lat, lng) {
             $("h3.condition").html(data.query.results.channel.item.condition.text);
             weatherIcon = "wi-yahoo-" + data.query.results.channel.item.condition.code;
             $("i.condition").addClass(weatherIcon);
-
+            //FORCAST INFOMATION
+            loadForecast(data);
         } else {
             $(".loading").html("<h3> Bummer... error in retreiving weather data.</h3><h4>Please try again later</h4>");
             console.log("problem fetching weather data from yahoo");
         }
     }); //close $.getJSON(yahoo weather)
+}
+
+function loadForecast(data){
+    $("div.fc-inner").html("");
+    for(var i=0; i<6; i++){
+        weatherIcon = "wi-yahoo-" + data.query.results.channel.item.forecast[i].code;
+        $("div.fc-inner").append("<div class = 'forecast'><h3>"
+            + data.query.results.channel.item.forecast[i].day + "</h3><h3>" + data.query.results.channel.item.forecast[i].high 
+            + "&deg<span id = 'cF'>" + data.query.results.channel.units.temperature + "</span>     "
+            + data.query.results.channel.item.forecast[i].low + "&deg<span id = 'cF'>" 
+            + data.query.results.channel.units.temperature + "</span></h3><i class='wi " + weatherIcon + "'></i></div>");
+    }
 }
 
 $(document).ready(function() {

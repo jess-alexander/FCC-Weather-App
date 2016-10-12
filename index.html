@@ -15,12 +15,11 @@
         <div class="loading">
             <h1>Please wait while we load your weather information</h1>
         </div>
-        <header class="row text-center weather-info">
-            <h1 id="location" class="col-xs-12"></h1>
-        </header>
         <section class="weather-info ">
+            
             <!-- Current Temperature -->
             <div class="row">
+                <h1 id="location" class="col-xs-12"></h1>
                 <div class="col-xs-5"></div>
                 <div class="col-xs-2">
                     <div id="temp-wrapper"></div>
@@ -36,12 +35,19 @@
                 </div>
                 <div class="col-xs-4"></div>
             </div>
-            <div>
-            <!-- Yahoo Afflication -->
-                <a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/> </a>
-            </div>
-            <!-- Geolocation vs ipLocation         -->
-            <div id="banner" class="row"></div>
+            <!-- 10 Day Forecast -->
+            <div class="row">
+                <div class = "fc-container">
+                    <div class="fc-inner"></div>
+                    <!-- Geolocation vs ipLocation         -->
+                    <div id="banner" class="row"></div>
+                    <!-- Yahoo Affliation -->
+                    <div class = "yahoo-aff">
+                        <a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29" /> </a>
+                    </div>
+                </div>
+            </div>    
+            
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
