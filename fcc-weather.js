@@ -57,7 +57,7 @@ function getWeather(lat, lng) {
 
 function loadForecast(data){
     $("div.fc-inner").html("");
-    for(var i=0; i<6; i++){
+    for(var i=0; i<5; i++){
         weatherIcon = "wi-yahoo-" + data.query.results.channel.item.forecast[i].code;
         $("div.fc-inner").append("<div class = 'forecast'><h3>"
             + data.query.results.channel.item.forecast[i].day + "</h3><h3>" + data.query.results.channel.item.forecast[i].high 

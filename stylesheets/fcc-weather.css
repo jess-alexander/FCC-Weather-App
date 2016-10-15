@@ -42,7 +42,9 @@ i.wi{
     color:white;
 }
 div.fc-container{
+    overflow: hidden;
      margin: 0 auto;
+     width:900px;
      background: rgba(139, 173, 187, .75);
      border-radius: 1em;
        -webkit-box-shadow: inset 0 0 2em rgba(238, 249, 251, .25);
@@ -50,11 +52,7 @@ div.fc-container{
        -o-box-shadow: inset 0 0 2em rgba(238, 249, 251, .25);
        box-shadow: inset 0 0 2em rgba(238, 249, 251, .25);
 }
-div.fc-inner{
-    overflow: hidden;
-    margin: 0 auto;
-    width:1000px;
-}
+
 div.forecast{
     position: relative;
     float:left;
@@ -63,5 +61,5 @@ div.forecast{
 }
 
 div.forecast:first-of-type{
-    padding-left:2.2em;
+    padding-left:3.8em;
 }
